@@ -11,18 +11,6 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
     return "Loading...";
   }
 
-  const d = new Date(lastUpdate);
-  const datestring =
-    d.getDate() +
-    "-" +
-    (d.getMonth() + 1) +
-    "-" +
-    d.getFullYear() +
-    " " +
-    d.getHours() +
-    ":" +
-    d.getMinutes();
-
   return (
     <div className={styles.container}>
       <Grid container spacing={3} justify="center">
