@@ -4,6 +4,7 @@
   width: 85%;
 }
 
+/* Responsiveness */
 @media only screen and (max-width: 770px) {
   .container {
     width: 100%;
