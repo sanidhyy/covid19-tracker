@@ -32,7 +32,11 @@ export default class App extends Component {
 
     return (
       <div className={styles.container}>
-        <a href="http://www.github.com" target="_blank">
+        {/* Github repository link */}
+        <a
+          href="https://github.com/Technical-Shubham-tech/covid19-tracker"
+          target="_blank"
+        >
           <img src={Logo} className={styles.image} alt="COVID-19" />
         </a>
         <Cards data={data} />
