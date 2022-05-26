@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { fetchDailyData } from "../../api";
+// registering category scale
 import { Chart as ChartJS } from "chart.js/auto";
 import { Line, Bar } from "react-chartjs-2";
 
+// CSS Styles
 import styles from "./Charts.module.css";
 
+// fetch Data from API
 const Charts = ({ data: { confirmed, deaths, recovered }, country }) => {
   const [dailyData, setDailyData] = useState([]);
 
@@ -16,6 +19,7 @@ const Charts = ({ data: { confirmed, deaths, recovered }, country }) => {
     fetchAPI();
   }, []);
 
+  // Line Chart
   const lineChart = dailyData[0] ? (
     <Line
       data={{
@@ -39,6 +43,7 @@ const Charts = ({ data: { confirmed, deaths, recovered }, country }) => {
     />
   ) : null;
 
+  // Bar Chart
   const barChart = confirmed ? (
     <Bar
       data={{

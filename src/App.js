@@ -4,9 +4,11 @@ import { Cards, Charts, CountryPicker } from "./components";
 import styles from "./App.module.css";
 import { fetchData } from "./api";
 
+// Logo
 import Logo from "./images/image.png";
 
 export default class App extends Component {
+  // store data and selected country in state
   state = {
     data: {},
     country: "",
@@ -18,6 +20,7 @@ export default class App extends Component {
     this.setState({ data: fetchedData });
   }
 
+  // runs when a country is selected by user
   handleCountryChange = async (country) => {
     const fetchedData = await fetchData(country);
 
@@ -29,7 +32,9 @@ export default class App extends Component {
 
     return (
       <div className={styles.container}>
-        <img src={Logo} className={styles.image} alt="COVID-19" />
+        <a href="http://www.github.com" target="_blank">
+          <img src={Logo} className={styles.image} alt="COVID-19" />
+        </a>
         <Cards data={data} />
         <CountryPicker handleCountryChange={this.handleCountryChange} />
         <Charts data={data} country={country} />
