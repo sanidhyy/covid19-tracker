@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { fetchDailyData } from "../../api";
 // registering category scale
+// eslint-disable-next-line
 import { Chart as ChartJS } from "chart.js/auto";
 import { Line, Bar } from "react-chartjs-2";
 
