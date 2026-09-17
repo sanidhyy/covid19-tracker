@@ -34,7 +34,7 @@ export default class App extends Component {
       <div className={styles.container}>
         {/* Github repository link */}
         <a
-          href="https://github.com/Technical-Shubham-tech/covid19-tracker"
+          href="https://github.com/sanidhyy/covid19-tracker"
           target="_blank"
           rel="noreferrer"
         >
